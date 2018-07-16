@@ -1,0 +1,53 @@
+<dx-data-grid 
+    #grid
+    id="gridContainer"
+    [dataSource]="dataSource"
+    [remoteOperations]="false"
+    [allowColumnReordering]="false"
+    [rowAlternationEnabled]="true"
+    (onContentReady)="contentReady($event)"
+    [selectedRowKeys]="[]">
+
+    <dxo-paging [pageSize]="10"></dxo-paging>
+    <dxo-pager
+        [showPageSizeSelector]="false"
+        [allowedPageSizes]="[10, 25, 50, 100]"
+    ></dxo-pager>
+    <dxo-search-panel
+        [visible]="false"
+        [highlightCaseSensitive]="true"
+    ></dxo-search-panel>
+    <dxo-group-panel
+        [visible]="false"
+    ></dxo-group-panel>
+    <dxo-grouping
+        [autoExpandAll]="true"
+    ></dxo-grouping>
+    <dxo-selection mode="single"></dxo-selection>
+    <dxi-column dataField="Name" caption="Название" dataType="string"></dxi-column>
+    <dxi-column dataField="Status" caption="Состояние: выкл/вкл" alignment="left" cellTemplate="switchTemplate"></dxi-column>
+    <dxi-column dataField="ErrorDate.length" caption="Ошибки" dataType="number" alignment="left"></dxi-column>
+    <dxi-column dataField="StartDate" caption="Дата последнего запуска" dataType="date" cellTemplate="startDateTemplate"></dxi-column>
+    <dxi-column dataField="ErrorDate" caption="Дата последней ошибки" dataType="string" cellTemplate="errorDateTemplate" ></dxi-column>
+    <dxi-column dataField="ErrorText" caption="Текст последней ошибки" dataType="string" cellTemplate="errorTextTemplate"></dxi-column>
+
+    
+    <div *dxTemplate="let etl of 'switchTemplate'" class="switch-block">
+        <div class="dx-field-value switcher">
+            <dx-switch [value]="etl.value" (onValueChanged)="switchIt($event)"></dx-switch>
+        </div>
+    </div>
+
+    <div *dxTemplate="let starts of 'startDateTemplate'">
+        <p>{{starts.value | date: 'dd/MM/yyyy, HH:mm:ss'}}</p>
+    </div>
+
+    <div *dxTemplate="let errors of 'errorDateTemplate'">
+        <p>{{errors.value[errors.value.length-1] | date: 'dd/MM/yyyy, HH:mm:ss'}}</p>
+    </div>
+    
+    <div *dxTemplate="let errTexts of 'errorTextTemplate'">
+        <p [innerHtml]="errTexts.value[errTexts.value.length-1]"></p>
+    </div>
+
+</dx-data-grid>

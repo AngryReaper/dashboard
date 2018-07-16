@@ -1,0 +1,50 @@
+<div>
+  <div class="update-block">
+    <p class="update">Укажите период обновления данных в миллисекундах: </p>
+    <input class="update update-input" [(ngModel)]="update">
+  </div>
+  <dx-data-grid id="serversGridContainer" [dataSource]="serversSource" [paging]="false" [height]="840" [remoteOperations]="false"
+    [rowAlternationEnabled]="true" [allowColumnReordering]="true" (onContentReady)="contentReady($event)">
+
+    <dxo-group-panel [visible]="true"></dxo-group-panel>
+    <dxo-scrolling mode="standart"></dxo-scrolling>
+    <dxo-grouping #expand [autoExpandAll]="true"></dxo-grouping>
+
+    <dxi-column dataField="Name" caption="Имя сервера" dataType="string"></dxi-column>
+    <dxi-column dataField="Status" caption="Теги" alignment="center" [groupIndex]="0"></dxi-column>
+    <dxi-column dataField="RAM" caption="Память" dataType="number" format="fixedPoint" cellTemplate="chartTemplate" [width]="200"></dxi-column>
+    <dxi-column dataField="CPU" caption="Процессор" dataType="number" format="fixedPoint" cellTemplate="chartTemplate" [width]="200"></dxi-column>
+    <dxi-column dataField="HDD1" caption="Диск1" dataType="number" format="fixedPoint" cellTemplate="circularGaugeTemplate" [width]="170"></dxi-column>
+    <dxi-column dataField="HDD2" caption="Диск2" dataType="number" format="fixedPoint" cellTemplate="circularGaugeTemplate" [width]="170"></dxi-column>
+    <dxi-column dataField="Services" caption="Сервисы" dataType="string"></dxi-column>
+
+    <div *dxTemplate="let c of 'chartTemplate'">
+      <div class="chart-cell">
+        <dx-bullet [showTarget]="false" [showZeroLevel]="true" [startScaleValue]="0" [endScaleValue]="100" [value]="c.value">
+          <dxo-size [width]="150" [height]="35"></dxo-size>
+          <dxo-tooltip [enabled]="true" [paddingTopBottom]="2" [customizeTooltip]="customizeTooltip">
+            <dxo-font [size]="12"></dxo-font>
+          </dxo-tooltip>
+          <dxo-margin [top]="5" [bottom]="0" [left]="5"></dxo-margin>
+        </dx-bullet>
+      </div>
+    </div>
+
+    <div *dxTemplate="let gauges of 'circularGaugeTemplate'">
+      <div id="gauge-panel">
+        <dx-circular-gauge id="gauge" [value]="gauges.value">
+          <dxo-range-container>
+            <dxi-range [startValue]="0" [endValue]="35" color="#77DD77"></dxi-range>
+            <dxi-range [startValue]="35" [endValue]="70" color="#E6E200"></dxi-range>
+            <dxi-range [startValue]="70" [endValue]="100" color="#DD2C2C"></dxi-range>
+          </dxo-range-container>
+          <dxo-size [width]="150" [height]="150"></dxo-size>
+          <dxo-scale [startValue]="0" [endValue]="100" [tickInterval]="5">
+            <dxo-label [customizeText]="percentFormatting"></dxo-label>
+          </dxo-scale>
+          <dxo-tooltip [enabled]="true"></dxo-tooltip>
+        </dx-circular-gauge>
+      </div>
+    </div>
+  </dx-data-grid>
+</div>

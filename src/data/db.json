@@ -1,0 +1,362 @@
+{
+  "tabs": [
+    {
+      "id": 0,
+      "Title": "Мониторинг ETL"
+    },
+    {
+      "id": 1,
+      "Title": "Мониторинг хостов"
+    },
+    {
+      "id": 2,
+      "Title": "Мониторинг сервисов"
+    }
+  ],
+  "etl": [
+    {
+      "id": 0,
+      "Name": "Alfa",
+      "Status": false,
+      "StartDate": "2018-07-13 08:40:43",
+      "ErrorDate": [],
+      "ErrorText": []
+    },
+    {
+      "id": 1,
+      "Name": "Bravo",
+      "Status": true,
+      "StartDate": "2017-05-13T14:01:00",
+      "ErrorDate": [
+        "2018-03-08T15:45:23"
+      ],
+      "ErrorText": [
+        "Running out of space for the log files"
+      ]
+    },
+    {
+      "id": 2,
+      "Name": "Charlie",
+      "Status": true,
+      "StartDate": "2017-04-14T08:22:37",
+      "ErrorDate": [],
+      "ErrorText": []
+    },
+    {
+      "id": 3,
+      "Name": "Delta",
+      "Status": false,
+      "StartDate": "2017-06-17T08:54:22",
+      "ErrorDate": [],
+      "ErrorText": []
+    },
+    {
+      "id": 4,
+      "Name": "Echo",
+      "Status": true,
+      "StartDate": "2017-02-10T11:30:41",
+      "ErrorDate": [],
+      "ErrorText": []
+    },
+    {
+      "id": 5,
+      "Name": "Foxtrot",
+      "Status": false,
+      "StartDate": "2017-02-10T11:40:05",
+      "ErrorDate": [],
+      "ErrorText": []
+    },
+    {
+      "id": 6,
+      "Name": "Golf",
+      "Status": true,
+      "StartDate": "2017-02-14T11:45:27",
+      "ErrorDate": [
+        "2018-01-02T03:05:18",
+        "2018-01-08T07:15:54"
+      ],
+      "ErrorText": [
+        "Running out of table space",
+        "Running out of disk space"
+      ]
+    },
+    {
+      "id": 7,
+      "Name": "Hotel",
+      "Status": true,
+      "StartDate": "2017-05-03T12:37:42",
+      "ErrorDate": [],
+      "ErrorText": []
+    },
+    {
+      "id": 8,
+      "Name": "India",
+      "Status": true,
+      "StartDate": "2017-08-11T16:18:33",
+      "ErrorDate": [
+        "2017-09-05T13:24:00"
+      ],
+      "ErrorText": [
+        "Errors in the source application data"
+      ]
+    },
+    {
+      "id": 9,
+      "Name": "Juliet",
+      "Status": false,
+      "StartDate": "2018-07-14 17:27:38",
+      "ErrorDate": [],
+      "ErrorText": []
+    }
+  ],
+  "servers": [
+    {
+      "id": 0,
+      "Name": "Srv1",
+      "Status": "Online",
+      "RAM": 7,
+      "CPU": 18,
+      "HDD1": 47,
+      "HDD2": 32,
+      "Services": [
+        "usersService",
+        "geoPricesService"
+      ]
+    },
+    {
+      "id": 1,
+      "Name": "Srv2",
+      "Status": "Offline",
+      "RAM": 0,
+      "CPU": 0,
+      "HDD1": 0,
+      "HDD2": 0,
+      "Services": []
+    },
+    {
+      "id": 2,
+      "Name": "Srv3",
+      "Status": "Errors",
+      "RAM": 95,
+      "CPU": 57,
+      "HDD1": 33,
+      "HDD2": 34,
+      "Services": [
+        "usersService"
+      ]
+    },
+    {
+      "id": 3,
+      "Name": "Srv4",
+      "Status": "Online",
+      "RAM": 90,
+      "CPU": 25,
+      "HDD1": 7,
+      "HDD2": 22,
+      "Services": [
+        "promotionsService",
+        "discountsService"
+      ]
+    },
+    {
+      "id": 4,
+      "Name": "Srv5",
+      "Status": "Online",
+      "RAM": 58,
+      "CPU": 30,
+      "HDD1": 9,
+      "HDD2": 1,
+      "Services": [
+        "usersService",
+        "discountsService"
+      ]
+    },
+    {
+      "id": 5,
+      "Name": "Srv6",
+      "Status": "Online",
+      "RAM": 62,
+      "CPU": 72,
+      "HDD1": 84,
+      "HDD2": 8,
+      "Services": [
+        "discountsService"
+      ]
+    },
+    {
+      "id": 6,
+      "Name": "Srv7",
+      "Status": "Online",
+      "RAM": 71,
+      "CPU": 75,
+      "HDD1": 61,
+      "HDD2": 18,
+      "Services": [
+        "usersService",
+        "discountsService"
+      ]
+    },
+    {
+      "id": 7,
+      "Name": "Srv8",
+      "Status": "Online",
+      "RAM": 20,
+      "CPU": 17,
+      "HDD1": 93,
+      "HDD2": 26,
+      "Services": [
+        "usersService",
+        "discountsService",
+        "geoPricesService"
+      ]
+    },
+    {
+      "id": 8,
+      "Name": "Srv9",
+      "Status": "Online",
+      "RAM": 15,
+      "CPU": 45,
+      "HDD1": 79,
+      "HDD2": 30,
+      "Services": [
+        "discountsService"
+      ]
+    },
+    {
+      "id": 9,
+      "Name": "Srv10",
+      "Status": "Online",
+      "RAM": 62,
+      "CPU": 53,
+      "HDD1": 85,
+      "HDD2": 27,
+      "Services": [
+        "promotionsService",
+        "geoPricesService"
+      ]
+    }
+  ],
+  "services": [
+    {
+      "id": 0,
+      "Name": "usersService",
+      "Tags": [
+        {
+          "site": "site",
+          "mobileSite": "mobileSite",
+          "android": "android",
+          "ios": "ios",
+          "users": "users"
+        }
+      ],
+      "Status": "OK",
+      "Version": "1.02"
+    },
+    {
+      "id": 1,
+      "Name": "usersSubscriptionsService",
+      "Tags": [
+        {
+          "site": "site",
+          "mobileSite": "mobileSite",
+          "android": "android",
+          "ios": "ios",
+          "users": "users",
+          "subscriptions": "subscriptions"
+        }
+      ],
+      "Status": "Error",
+      "Version": "1.05"
+    },
+    {
+      "id": 2,
+      "Name": "promotionsService",
+      "Tags": [
+        {
+          "site": "site",
+          "mobileSite": "mobileSite",
+          "android": "android",
+          "ios": "ios",
+          "newPrice": "newPrice",
+          "temporary": "temporary"
+        }
+      ],
+      "Status": "Warning",
+      "Version": "2.04"
+    },
+    {
+      "id": 3,
+      "Name": "discountsService",
+      "Tags": [
+        {
+          "site": "site",
+          "mobileSite": "mobileSite",
+          "android": "android",
+          "ios": "ios",
+          "newPrice": "newPrice",
+          "temporary": "temporary"
+        }
+      ],
+      "Status": "OK",
+      "Version": "1.07"
+    },
+    {
+      "id": 4,
+      "Name": "geoPricesService",
+      "Tags": [
+        {
+          "site": "site",
+          "mobileSite": "mobileSite",
+          "android": "android",
+          "ios": "ios",
+          "newPrice": "newPrice",
+          "constant": "constant"
+        }
+      ],
+      "Status": "OK",
+      "Version": "1.07"
+    }
+  ],
+  "sd": [
+    {
+      "id": 0,
+      "serviceName": "usersService",
+      "serviceLocations": [
+        "Srv1",
+        "Srv3",
+        "Srv5",
+        "Srv7",
+        "Srv8"
+      ]
+    },
+    {
+      "id": 1,
+      "serviceName": "promotionsService",
+      "serviceLocations": [
+        "Srv4",
+        "Srv10"
+      ]
+    },
+    {
+      "id": 2,
+      "serviceName": "discountsService",
+      "serviceLocations": [
+        "Srv4",
+        "Srv5",
+        "Srv6",
+        "Srv7",
+        "Srv8",
+        "Srv9"
+      ]
+    },
+    {
+      "id": 3,
+      "serviceName": "geoPricesService",
+      "serviceLocations": [
+        "Srv1",
+        "Srv8",
+        "Srv10"
+      ]
+    }
+  ]
+}

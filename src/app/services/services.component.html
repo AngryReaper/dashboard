@@ -1,0 +1,26 @@
+<dx-data-grid 
+    id="serviceGridContainer"
+    [dataSource]="servicesSource"
+    [remoteOperations]="false"
+    [allowColumnReordering]="true">    
+    
+    <dxo-paging [pageSize]="10"></dxo-paging>
+    <dxo-group-panel [visible]="true"></dxo-group-panel>
+    <dxo-grouping #expand [autoExpandAll]="true"></dxo-grouping>
+
+    <dxi-column dataField="Name" caption="Название" dataType="string"></dxi-column>
+    <dxi-column caption="Теги" alignment="center">
+      <dxi-column dataField="Tags[0].site" caption="Site" dataType="string"></dxi-column>
+      <dxi-column dataField="Tags[0].mobileSite" caption="Mobile Site" dataType="string"></dxi-column>
+      <dxi-column dataField="Tags[0].android" caption="Android" dataType="string"></dxi-column>
+      <dxi-column dataField="Tags[0].ios" caption="iOS" dataType="string"></dxi-column>
+      <dxi-column dataField="Tags[0].users" caption="Users" dataType="string"></dxi-column>
+      <dxi-column dataField="Tags[0].subscriptions" caption="Subscriptions" dataType="string"></dxi-column>
+      <dxi-column dataField="Tags[0].newPrice" caption="New price" dataType="string"></dxi-column>
+      <dxi-column dataField="Tags[0].temporary" caption="Temporary" dataType="string"></dxi-column>
+      <dxi-column dataField="Tags[0].constant" caption="Constant" dataType="string"></dxi-column>
+    </dxi-column>
+    <dxi-column dataField="Status" caption="Статус" dataType="string" [groupIndex]="0"></dxi-column>
+    <dxi-column dataField="Version" caption="Версия релиза" dataType="string"></dxi-column>
+
+</dx-data-grid>
