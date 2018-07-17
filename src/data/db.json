@@ -114,10 +114,10 @@
       "id": 0,
       "Name": "Srv1",
       "Status": "Online",
-      "RAM": 7,
-      "CPU": 18,
-      "HDD1": 47,
-      "HDD2": 32,
+      "RAM": 30,
+      "CPU": 96,
+      "HDD1": 14,
+      "HDD2": 31,
       "Services": [
         "usersService",
         "geoPricesService"
@@ -137,10 +137,10 @@
       "id": 2,
       "Name": "Srv3",
       "Status": "Errors",
-      "RAM": 95,
-      "CPU": 57,
-      "HDD1": 33,
-      "HDD2": 34,
+      "RAM": 41,
+      "CPU": 97,
+      "HDD1": 69,
+      "HDD2": 48,
       "Services": [
         "usersService"
       ]
@@ -149,10 +149,10 @@
       "id": 3,
       "Name": "Srv4",
       "Status": "Online",
-      "RAM": 90,
-      "CPU": 25,
-      "HDD1": 7,
-      "HDD2": 22,
+      "RAM": 73,
+      "CPU": 19,
+      "HDD1": 66,
+      "HDD2": 41,
       "Services": [
         "promotionsService",
         "discountsService"
@@ -162,10 +162,10 @@
       "id": 4,
       "Name": "Srv5",
       "Status": "Online",
-      "RAM": 58,
-      "CPU": 30,
-      "HDD1": 9,
-      "HDD2": 1,
+      "RAM": 64,
+      "CPU": 58,
+      "HDD1": 99,
+      "HDD2": 26,
       "Services": [
         "usersService",
         "discountsService"
@@ -175,10 +175,10 @@
       "id": 5,
       "Name": "Srv6",
       "Status": "Online",
-      "RAM": 62,
-      "CPU": 72,
-      "HDD1": 84,
-      "HDD2": 8,
+      "RAM": 76,
+      "CPU": 41,
+      "HDD1": 63,
+      "HDD2": 6,
       "Services": [
         "discountsService"
       ]
@@ -187,10 +187,10 @@
       "id": 6,
       "Name": "Srv7",
       "Status": "Online",
-      "RAM": 71,
-      "CPU": 75,
-      "HDD1": 61,
-      "HDD2": 18,
+      "RAM": 65,
+      "CPU": 74,
+      "HDD1": 27,
+      "HDD2": 16,
       "Services": [
         "usersService",
         "discountsService"
@@ -200,10 +200,10 @@
       "id": 7,
       "Name": "Srv8",
       "Status": "Online",
-      "RAM": 20,
-      "CPU": 17,
-      "HDD1": 93,
-      "HDD2": 26,
+      "RAM": 75,
+      "CPU": 38,
+      "HDD1": 73,
+      "HDD2": 42,
       "Services": [
         "usersService",
         "discountsService",
@@ -214,10 +214,10 @@
       "id": 8,
       "Name": "Srv9",
       "Status": "Online",
-      "RAM": 15,
-      "CPU": 45,
-      "HDD1": 79,
-      "HDD2": 30,
+      "RAM": 53,
+      "CPU": 48,
+      "HDD1": 2,
+      "HDD2": 39,
       "Services": [
         "discountsService"
       ]
@@ -226,10 +226,10 @@
       "id": 9,
       "Name": "Srv10",
       "Status": "Online",
-      "RAM": 62,
-      "CPU": 53,
-      "HDD1": 85,
-      "HDD2": 27,
+      "RAM": 72,
+      "CPU": 30,
+      "HDD1": 9,
+      "HDD2": 24,
       "Services": [
         "promotionsService",
         "geoPricesService"
